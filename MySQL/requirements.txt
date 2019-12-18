@@ -1,0 +1,5 @@
+autopep8==1.4.4
+pycodestyle==2.5.0
+pycosat==0.6.3
+PyMySQL==0.9.3
+ruamel-yaml==0.15.87
