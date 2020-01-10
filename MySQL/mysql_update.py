@@ -1,4 +1,3 @@
-# Importamos a biblioteca:
 import pymysql
 
 conn = pymysql.connect(db='garage', user='root', passwd='')

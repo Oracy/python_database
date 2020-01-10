@@ -1,14 +1,12 @@
-# Importamos a biblioteca:
 import init_mysql
 
-def insert_query(conn):
-    pass
+def insert_query(conn, table=None, columns=None, data=None):
     cursor = conn.cursor()
     res = cursor.execute(
-        "INSERT INTO cars (plate, owner_name) VALUES ('ABC-1234', 'John'), ('ABC-1234', 'John')")
+        "INSERT INTO {} ({}) VALUES {}")
     print("Affected rows (Inserted): {}".format(res))
     conn.commit()
 
 conn = init_mysql.open_connection()
 insert_query(conn)
-init_mysql.close_connection()
+init_mysql.close_connection(conn)
